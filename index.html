@@ -161,6 +161,112 @@ text-align:center;
 padding:50px;
 background:#020617;
 }
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablet */
+@media (max-width: 1024px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+justify-content:center;
+}
+
+.hero-left h1{
+font-size:50px;
+}
+
+.hero-right{
+width:300px;
+height:300px;
+margin-top:40px;
+}
+
+.horizontal-section{
+gap:20px;
+}
+
+.project-card{
+min-width:300px;
+height:auto;
+margin:20px;
+}
+
+}
+
+/* Mobile */
+@media (max-width: 768px){
+
+body{
+cursor:auto; /* Disable custom cursor on mobile */
+}
+
+.cursor{
+display:none;
+}
+
+.hero{
+padding:0 5%;
+}
+
+.hero-left h1{
+font-size:38px;
+}
+
+.hero-left h3{
+font-size:16px;
+}
+
+.btn-magnetic{
+padding:12px 20px;
+font-size:14px;
+}
+
+.hero-right{
+width:220px;
+height:220px;
+font-size:20px;
+}
+
+.horizontal-section{
+flex-direction:column;
+overflow-x:hidden;
+align-items:center;
+}
+
+.project-card{
+width:90%;
+min-width:auto;
+}
+
+.skill{
+margin:25px 0;
+}
+
+.counter{
+font-size:35px;
+}
+
+}
+
+/* Small Mobile */
+@media (max-width: 480px){
+
+.hero-left h1{
+font-size:30px;
+}
+
+.hero-right{
+width:180px;
+height:180px;
+}
+
+footer{
+font-size:14px;
+padding:30px;
+}
+
+}
 
 </style>
 </head>
