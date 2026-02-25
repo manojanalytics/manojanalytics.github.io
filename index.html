@@ -5,11 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Manoj Sharma | Data Analyst</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* ================= RESET ================= */
+/* ================= GLOBAL ================= */
+
 *{
 margin:0;
 padding:0;
@@ -19,63 +20,84 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Poppins',sans-serif;
-background:#040814;
+background:#050816;
 color:white;
 overflow-x:hidden;
 }
 
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
 /* ================= NAVBAR ================= */
+
 nav{
 position:fixed;
+top:0;
+left:0;
 width:100%;
-padding:20px 10%;
-display:flex;
-justify-content:space-between;
-align-items:center;
+padding:20px 0;
 background:rgba(0,0,0,0.4);
 backdrop-filter:blur(15px);
 z-index:1000;
 }
 
-nav h2{
+.nav-wrapper{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
 font-family:'Orbitron';
+font-size:24px;
 color:#00f5ff;
 }
 
-nav ul{
+.nav-links{
 display:flex;
 gap:40px;
 list-style:none;
 }
 
-nav ul li a{
+.nav-links a{
 text-decoration:none;
 color:white;
 font-weight:500;
 transition:0.3s;
 }
 
-nav ul li a:hover{
+.nav-links a:hover{
 color:#00f5ff;
 }
 
 /* ================= HERO ================= */
+
 .hero{
 min-height:100vh;
 display:flex;
 align-items:center;
+justify-content:center;
+padding-top:100px;
+}
+
+.hero-content{
+display:flex;
+align-items:center;
 justify-content:space-between;
-padding:0 10%;
+gap:60px;
 flex-wrap:wrap;
 }
 
 .hero-left{
-flex:1;
+flex:1 1 500px;
 }
 
 .hero-left h1{
 font-family:'Orbitron';
-font-size:clamp(40px,6vw,80px);
+font-size:clamp(40px,6vw,70px);
 line-height:1.1;
 }
 
@@ -87,6 +109,7 @@ color:#00f5ff;
 margin-top:20px;
 font-size:18px;
 opacity:0.8;
+max-width:500px;
 }
 
 .hero-btn{
@@ -102,51 +125,68 @@ transition:0.4s;
 }
 
 .hero-btn:hover{
-transform:scale(1.1);
+transform:scale(1.08);
 box-shadow:0 0 40px #00f5ff;
 }
+
+/* ================= HERO RIGHT ANIMATION ================= */
 
 .hero-right{
-flex:1;
+flex:1 1 400px;
 display:flex;
 justify-content:center;
-margin-top:60px;
+align-items:center;
 }
 
-.profile-img{
-width:350px;
-max-width:90%;
+.glow-box{
+width:100%;
+max-width:500px;
+height:300px;
+position:relative;
+}
+
+.glow-ring{
+position:absolute;
+width:100%;
+height:100%;
 border-radius:50%;
-border:4px solid #00f5ff;
+border:3px solid #00f5ff;
 box-shadow:0 0 40px #00f5ff;
-transition:0.4s;
+animation:spin 8s linear infinite;
 }
 
-.profile-img:hover{
-transform:scale(1.05);
+@keyframes spin{
+from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
 }
 
-/* ================= SECTION COMMON ================= */
+/* ================= SECTION ================= */
+
 section{
-padding:120px 10%;
+padding:100px 0;
 }
 
 .section-title{
-font-size:40px;
+text-align:center;
+font-size:36px;
 font-family:'Orbitron';
 margin-bottom:60px;
-text-align:center;
 }
 
 /* ================= SKILLS ================= */
+
 .skill{
-margin-bottom:40px;
+margin-bottom:30px;
+}
+
+.skill p{
+margin-bottom:10px;
 }
 
 .bar{
 height:10px;
 background:#1e293b;
-border-radius:10px;
+border-radius:20px;
 overflow:hidden;
 }
 
@@ -158,10 +198,11 @@ transition:2s;
 }
 
 /* ================= PROJECTS ================= */
+
 .projects-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:40px;
+gap:30px;
 }
 
 .project-card{
@@ -178,11 +219,12 @@ box-shadow:0 0 40px #00f5ff;
 }
 
 /* ================= CONTACT ================= */
-.contact-box{
+
+.contact{
 text-align:center;
 }
 
-.contact-box a{
+.contact a{
 display:inline-block;
 margin-top:20px;
 padding:15px 35px;
@@ -194,30 +236,28 @@ font-weight:600;
 }
 
 /* ================= FOOTER ================= */
+
 footer{
 text-align:center;
 padding:40px;
 background:#020617;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= MOBILE ================= */
+
 @media(max-width:768px){
 
-nav ul{
+.nav-links{
 display:none;
 }
 
-.hero{
+.hero-content{
+flex-direction:column;
 text-align:center;
 }
 
-.hero-left{
-order:2;
-}
-
-.hero-right{
-order:1;
-margin-bottom:40px;
+.hero-left p{
+margin:auto;
 }
 
 }
@@ -228,15 +268,19 @@ margin-bottom:40px;
 <body>
 
 <nav>
-<h2>Manoj</h2>
-<ul>
+<div class="container nav-wrapper">
+<div class="logo">Manoj</div>
+<ul class="nav-links">
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
+</div>
 </nav>
 
 <section class="hero">
+<div class="container hero-content">
+
 <div class="hero-left">
 <h1>Manoj <span>Sharma</span></h1>
 <p>Professional Data Analyst specializing in SQL, Excel, Power BI & Python for business intelligence solutions.</p>
@@ -244,11 +288,16 @@ margin-bottom:40px;
 </div>
 
 <div class="hero-right">
-<img src="your-image.jpg" class="profile-img">
+<div class="glow-box">
+<div class="glow-ring"></div>
+</div>
+</div>
+
 </div>
 </section>
 
 <section id="skills">
+<div class="container">
 <h2 class="section-title">Technical Expertise</h2>
 
 <div class="skill">
@@ -266,34 +315,37 @@ margin-bottom:40px;
 <div class="bar"><div class="bar-fill" data-width="92%"></div></div>
 </div>
 
+</div>
 </section>
 
 <section id="projects">
+<div class="container">
 <h2 class="section-title">Projects</h2>
 
 <div class="projects-grid">
 <div class="project-card">
-<h3>Sales Intelligence Dashboard</h3>
-<p>Advanced KPI tracking & forecasting system built using Power BI & SQL.</p>
+<h3>Sales Dashboard</h3>
+<p>Power BI based KPI tracking system.</p>
 </div>
 
 <div class="project-card">
 <h3>Customer Segmentation</h3>
-<p>Data clustering and behavioral analytics using Python.</p>
+<p>SQL + Python behavioral clustering.</p>
 </div>
 
 <div class="project-card">
-<h3>Finance Reporting System</h3>
-<p>Executive-level dynamic reporting suite.</p>
+<h3>Finance Report System</h3>
+<p>Executive reporting suite.</p>
 </div>
 </div>
 
+</div>
 </section>
 
 <section id="contact">
-<h2 class="section-title">Let's Work Together</h2>
-<div class="contact-box">
-<p>Available for Data Analyst roles & freelance BI projects.</p>
+<div class="container contact">
+<h2 class="section-title">Let’s Work Together</h2>
+<p>Available for Data Analyst roles & freelance projects.</p>
 <a href="#">Contact Me</a>
 </div>
 </section>
@@ -308,8 +360,8 @@ margin-bottom:40px;
 window.addEventListener("scroll",()=>{
 document.querySelectorAll(".bar-fill").forEach(bar=>{
 let rect=bar.getBoundingClientRect();
-if(rect.top<window.innerHeight){
-bar.style.width=bar.getAttribute("data-width");
+if(rect.top < window.innerHeight){
+bar.style.width = bar.getAttribute("data-width");
 }
 });
 });
