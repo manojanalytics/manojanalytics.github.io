@@ -1,100 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Manoj | Data Analyst</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f6f9;
-            text-align: center;
-        }
-        header {
-            background: #1f2937;
-            color: white;
-            padding: 60px 20px;
-        }
-        section {
-            padding: 50px 20px;
-        }
-        h1, h2 {
-            margin-bottom: 10px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #2563eb;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 15px;
-        }
-        .skills span {
-            display: inline-block;
-            background: #e5e7eb;
-            padding: 8px 15px;
-            margin: 5px;
-            border-radius: 20px;
-        }
-        .project {
-            background: white;
-            padding: 20px;
-            margin: 15px auto;
-            width: 80%;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        footer {
-            background: #1f2937;
-            color: white;
-            padding: 20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manoj | Data Analyst</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#f9fafb;
+color:#111827;
+scroll-behavior:smooth;
+}
+nav{
+background:#111827;
+padding:15px;
+text-align:center;
+position:sticky;
+top:0;
+}
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:500;
+}
+header{
+padding:100px 20px;
+text-align:center;
+background:linear-gradient(135deg,#2563eb,#1e40af);
+color:white;
+}
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:white;
+color:#1e40af;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+}
+section{
+padding:70px 20px;
+text-align:center;
+}
+.skills span{
+display:inline-block;
+background:#e0e7ff;
+padding:10px 18px;
+margin:6px;
+border-radius:25px;
+font-weight:500;
+}
+.project-card{
+background:white;
+max-width:800px;
+margin:20px auto;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+.project-card img{
+width:100%;
+border-radius:10px;
+}
+footer{
+background:#111827;
+color:white;
+padding:25px;
+}
+</style>
 </head>
+
 <body>
 
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
 <header>
-    <h1>Hi, I'm Manoj 👋</h1>
-    <p>Data Analyst | Excel | SQL | Power BI</p>
-    <a href="https://github.com/manojanalytics" class="btn">View My GitHub</a>
+<h1>Hi, I'm Manoj 👋</h1>
+<p>Data Analyst | Excel | SQL | Power BI</p>
+<a href="#" class="btn">Download Resume</a>
 </header>
 
-<section>
-    <h2>About Me</h2>
-    <p>I am a passionate Data Analyst focused on data cleaning, visualization and business insights.</p>
+<section id="about">
+<h2>About Me</h2>
+<p>I am a passionate Data Analyst focused on transforming raw data into meaningful business insights and interactive dashboards.</p>
 </section>
 
-<section>
-    <h2>Skills</h2>
-    <div class="skills">
-        <span>Excel</span>
-        <span>SQL</span>
-        <span>Power BI</span>
-        <span>Data Cleaning</span>
-        <span>Dashboard Building</span>
-    </div>
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<span>Excel</span>
+<span>SQL</span>
+<span>Power BI</span>
+<span>Data Cleaning</span>
+<span>Dashboard Design</span>
+<span>Business Analysis</span>
+</div>
 </section>
 
-<section>
-    <h2>Projects</h2>
-    <div class="project">
-        <h3>Sales Dashboard</h3>
-        <p>Built interactive Power BI dashboard to analyze company sales performance.</p>
-    </div>
+<section id="projects">
+<h2>Projects</h2>
 
-    <div class="project">
-        <h3>SQL Data Analysis</h3>
-        <p>Used SQL queries to extract and analyze customer insights from database.</p>
-    </div>
+<div class="project-card">
+<h3>Sales Dashboard</h3>
+<p>Created an interactive Power BI dashboard to track KPIs and revenue trends.</p>
+</div>
+
+<div class="project-card">
+<h3>Customer SQL Analysis</h3>
+<p>Used advanced SQL queries to analyze customer purchasing behavior.</p>
+</div>
+
 </section>
 
-<section>
-    <h2>Contact</h2>
-    <p>Email: yourname@email.com</p>
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: yourname@email.com</p>
+<p>GitHub: github.com/manojanalytics</p>
 </section>
 
 <footer>
-    <p>© 2026 Manoj | Data Analyst Portfolio</p>
+<p>© 2026 Manoj | Data Analyst Portfolio</p>
 </footer>
 
 </body>
